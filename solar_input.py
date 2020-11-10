@@ -30,8 +30,8 @@ def read_space_objects_data_from_file(input_filename):
             else:
                 print("Unknown space object")
     return objects
-
-
+  
+  
 def parse_star_parameters(line, star):
     """Считывает данные о звезде из строки.
     Входная строка должна иметь слеюущий формат:
@@ -88,10 +88,6 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     """
     with open(output_filename, 'w') as out_file:
         for obj in space_objects:
-<<<<<<< Updated upstream
-            print(out_file, "%s %d %s %f" % ('1', 2, '3', 4.5))
-            # FIXME: should store real values
-=======
             param_list = [0, 0, 0, 0, 0, 0, 0, 0]
             param_list[0] = obj.type
             param_list[1] = str(round(obj.R, 2))
@@ -105,7 +101,6 @@ def write_space_objects_data_to_file(output_filename, space_objects):
             print(out_file, parameters)
             out_file.write(parameters + "\n")
         out_file.close()
->>>>>>> Stashed changes
 
 
 if __name__ == "__main__":
